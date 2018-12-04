@@ -25,7 +25,7 @@
   animation:6s slideLetter infinite ease-in-out;
 }
 @keyframes slideLetter {
-  40%,60%,100%{transform:translate3d(0,-100px,0)}
+  40%,60%,100%{transform:translate3d(0,-160px,0)}
 }
 #letter {
   height:160px;
@@ -120,7 +120,7 @@
 
 <body translate="no" >
 
-  <div id="envolope" class="back">
+<div id="envolope" class="back">
   <div id="envolope-top" class="top"></div>
 </div>
 <div id="letter" class="letter">
@@ -153,7 +153,10 @@ window.onload = function () {
     }
     if (step === 2) {
       envolopeTop.style = "z-index: 95; border-top: 0px; border-bottom:170px solid rgb(168, 6, 6); top: -170px";
-      letter.style ="animation: 2s slideLetter; animation-fill-mode: forwards";
+      letter.style ="animation: 4s slideLetter; animation-fill-mode: forwards";
+    }
+    if (step === 3) {
+      //envolope.style = "visibility: hidden";
     }
     if (step === 4) {
       //reveal();
