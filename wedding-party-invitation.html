@@ -156,7 +156,8 @@ window.onload = function () {
       letter.style ="animation: 4s slideLetter; animation-fill-mode: forwards";
     }
     if (step === 3) {
-      //envolope.style = "visibility: hidden";
+      document.getElementsByClassName('back')[0] .style = "visibility: hidden";
+      document.getElementsByClassName('front')[0].style = "visibility: hidden";
     }
     if (step === 4) {
       //reveal();
