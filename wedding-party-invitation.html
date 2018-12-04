@@ -27,6 +27,11 @@
 @keyframes slideLetter {
   40%,60%,100%{transform:translate3d(0,-160px,0)}
 }
+
+@keyframes expandLetter {
+  0%{transform:translate3d(0,-160px,0)}
+  100%{transform:scale(5,5)}
+}
 #letter {
   height:160px;
   background:#fff;
@@ -34,7 +39,7 @@
   box-shadow:0 0 10px rgba(0,0,0,0.1);
   text-align:center;
   top: 450px;
-  transform-origin: top;
+  transform-origin: center;
   z-index: 96;
 }
 
@@ -158,6 +163,7 @@ window.onload = function () {
     if (step === 3) {
       document.getElementsByClassName('back')[0] .style = "visibility: hidden";
       document.getElementsByClassName('front')[0].style = "visibility: hidden";
+      letter.style = 'animation:2s expandLetter; animation-fill-mode: forwards';
     }
     if (step === 4) {
       //reveal();
