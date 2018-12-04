@@ -25,7 +25,7 @@
   animation:6s slideLetter infinite ease-in-out;
 }
 @keyframes slideLetter {
-  40%,60%{transform:translate3d(0,190px,0)}
+  40%,60%,100%{transform:translate3d(0,-100px,0)}
 }
 #letter {
   height:160px;
@@ -33,6 +33,9 @@
   border-radius:10px;
   box-shadow:0 0 10px rgba(0,0,0,0.1);
   text-align:center;
+  top: 450px;
+  transform-origin: top;
+  z-index: 96;
 }
 
 #letter span {
@@ -78,6 +81,7 @@
   border-left: 600px solid transparent;
   border-right: 600px solid transparent;
   border-bottom:350px solid #D60B0B;
+  z-index:98;
 }
 .top{
   position:absolute;
@@ -95,7 +99,7 @@
   z-index:100;
 }
 @keyframes flipTop {
-  50%{transform:rotateX(180deg);}
+  100%{transform:rotateX(180deg);}
 }
     </style>
 
@@ -145,11 +149,11 @@ window.onload = function () {
     console.log(step);
     if (step === 1) {
       envolope.removeEventListener("click", openLetter, false);
-      //letter.className = 'letter.animate';
-      letter.style ="animation: 6s slideLetter ease-in-out;";
-      envolopeTop.style = 'animation:6s flipTop ease-in-out';
+      envolopeTop.style = 'animation:2s flipTop; animation-fill-mode: forwards';
     }
-    if (step === 3) {
+    if (step === 2) {
+      envolopeTop.style = "z-index: 95; border-top: 0px; border-bottom:170px solid rgb(168, 6, 6); top: -170px";
+      letter.style ="animation: 2s slideLetter; animation-fill-mode: forwards";
     }
     if (step === 4) {
       //reveal();
