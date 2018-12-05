@@ -36,7 +36,7 @@ body {
 
 @keyframes expandLetter {
   0%{transform:translate3d(0,-160px,0)}
-  100%{transform:scale(5,5)}
+  100%{transform:scale(2,2)}
 }
 #letter {
   height:160px;
@@ -53,9 +53,10 @@ body {
   margin:10px auto;
   width:250px;
   height:20px;
-  background:rgba(0,0,0,0.1);
+  background: transparent;
   border-radius:50px;
   display:inline-block;
+  font-size: 30px;
 }
 #letter span:first-of-type {
   margin-top:35px;
@@ -258,7 +259,7 @@ div#sea {
   /*top:50%;
   width: 100%;*/
   height: auto;
-  transform: translateY(10px) rotate(-20deg);
+  transform: translateY(35px) rotate(-20deg);
 }
 .icons .row {
   width: 100%;
@@ -525,9 +526,8 @@ div#sea {
   <div id="envolope-top" class="top"></div>
 </div>
 <div id="letter" class="letter">
-  <span>Wedding Celebration</span>
-  <span>Jon & Hangi</span>
-  <span>4 Oct. 2019</span>
+  <span>You have been</span>
+  <span>invited to ...</span>
 </div>
 <div id="envolope" class="front">
   <div class="left"></div>
@@ -553,35 +553,52 @@ div#sea {
 <div id="merrywrap" class="merrywrap">
   <div class="icons">
     <div class="row">
-      <span>F</span>
-      <span>e</span>
-      <span>l</span>
-      <span>i</span>
-      <span>z</span>
-    </div>
-    <div class="row">
-      <span>C</span>
-      <span>u</span>
-      <span>m</span>
-      <span>p</span>
-      <span>l</span>
-      <span>e</span>
-      <span>a</span>
-      <span>ñ</span>
+      <span>J</span>
       <span>o</span>
+      <span>n</span>
+      <span></span>
+      <span>&</span>
+      <span></span>
+      <span>H</span>
+      <span>a</span>
+      <span>n</span>
+      <span>g</span>
+      <span>i</span>
       <span>s</span>
     </div>
     <div class="row">
-      <span>E</span>
-      <span>d</span>
-      <span>g</span>
-      <span>y</span>
-      <!-- <span>t</span>
-      <span>h</span>
+      <span>W</span>
       <span>e</span>
-      <span>a</span>
+      <span>d</span>
+      <span>d</span>
+      <span>i</span>
+      <span>n</span>
+      <span>g</span>
+      <span></span>
+      <span>C</span>
+      <span>e</span>
+      <span>l</span>
+      <span>e</span>
+      <span>b</span>
       <span>r</span>
-      <span>t</span> -->
+      <span>a</span>
+      <span>t</span>
+      <span>i</span>
+      <span>o</span>
+      <span>n</span>
+    </div>
+    <div class="row">
+      <span>4</span>
+      <span> </span>
+      <span>O</span>
+      <span>c</span>
+      <span>t</span>
+      <span>.</span>
+      <span> </span>
+      <span>2</span>
+      <span>0</span>
+      <span>1</span>
+      <span>9</span>
     </div>
   </div>
 </div>
@@ -867,7 +884,6 @@ window.onload = function () {
       envolope.removeEventListener("click", openLetter, false);
       envolopeTop.style = 'animation:2s flipTop; animation-fill-mode: forwards';
     }
-    merrywrap.className = 'merrywrap step-' + step;
     if (step === 2) {
       envolopeTop.style = "z-index: 95; border-top: 0px; border-bottom:170px solid rgb(168, 6, 6); top: -170px";
       letter.style ="animation: 4s slideLetter; animation-fill-mode: forwards";
@@ -877,7 +893,10 @@ window.onload = function () {
       document.getElementsByClassName('front')[0].style = "visibility: hidden";
       letter.style = 'animation:2s expandLetter; animation-fill-mode: forwards';
     }
-    if (step === 4) {
+    if (step > 3) {
+      merrywrap.className = 'merrywrap step-' + (step - 3);
+    }
+    if (step === 7) {
       reveal();
       letter.className = 'letter';
       return;
