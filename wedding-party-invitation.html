@@ -873,35 +873,38 @@ window.onload = function () {
   var letter = document.getElementById("letter");
   var envolope = document.getElementById("envolope");
   var envolopeTop = document.getElementById("envolope-top");
-  var step = 1;
-  var stepMinutes = [2000, 2000, 1000, 1000];
+  var step = 0;
+  var stepMinutes = [2000, 2000, 1000, 1000, 1000, 1000, 2000, 1000];
   function init() {
     envolope.addEventListener("click", openLetter, false);
   }
   function openLetter() {
     console.log(step);
-    if (step === 1) {
+    if (step === 0) {
       envolope.removeEventListener("click", openLetter, false);
       envolopeTop.style = 'animation:2s flipTop; animation-fill-mode: forwards';
     }
-    if (step === 2) {
+    if (step === 1) {
       envolopeTop.style = "z-index: 95; border-top: 0px; border-bottom:170px solid rgb(168, 6, 6); top: -170px";
       letter.style ="animation: 4s slideLetter; animation-fill-mode: forwards";
     }
-    if (step === 3) {
+    if (step === 2) {
       document.getElementsByClassName('back')[0] .style = "visibility: hidden";
       document.getElementsByClassName('front')[0].style = "visibility: hidden";
       letter.style = 'animation:2s expandLetter; animation-fill-mode: forwards';
     }
-    if (step > 3) {
+    if (step > 2) {
       merrywrap.className = 'merrywrap step-' + (step - 3);
     }
-    if (step === 7) {
+    if (step === 6) {
       reveal();
       letter.className = 'letter';
+    }
+    if (step === 7) {
+      letter.style = "visibility: hidden";
       return;
     }
-    setTimeout(openLetter, stepMinutes[step - 1]);
+    setTimeout(openLetter, stepMinutes[step]);
     step++;
   }
 
