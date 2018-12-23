@@ -110,6 +110,13 @@ body {
   transform-origin: top;
   z-index:100;
 }
+.top.text:after {
+  position: relative;
+  top: -150px;
+  left: -30px;
+  font-size: 40px;
+  content: "Click Me!";
+}
 @keyframes flipTop {
   100%{transform:rotateX(180deg);}
 }
@@ -523,7 +530,7 @@ div#sea {
 </style></head><body>
 
 <div id="envolope" class="back">
-  <div id="envolope-top" class="top"></div>
+  <div id="envolope-top" class="top text"></div>
 </div>
 <div id="letter" class="letter">
   <span>You have been</span>
@@ -882,6 +889,7 @@ window.onload = function () {
     console.log(step);
     if (step === 0) {
       envolope.removeEventListener("click", openLetter, false);
+      envolopeTop.className = 'top';
       envolopeTop.style = 'animation:2s flipTop; animation-fill-mode: forwards';
     }
     if (step === 1) {
