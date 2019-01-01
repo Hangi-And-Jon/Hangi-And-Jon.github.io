@@ -44,10 +44,14 @@ body {
 }
 
 .menu_wrapper {
+  position:absolute;
+  margin:auto;
+  top:80px;
+  left:0;
+  right:0;
   padding: 16px;
-  margin-top: 30px;
   height: 1500px; /* Used in this example to enable scrolling */
-  z-index: 200;
+  z-index: 10;
   color: #f2f2f2;
 }
 
@@ -292,6 +296,7 @@ div#sea {
   bottom: 0px;
   top: 0px;
   background-color: #d44;
+  z-index: 0;
   transition: background-color .5s ease;
 }
 
@@ -301,7 +306,7 @@ div#sea {
   /*top:50%;
   width: 100%;*/
   height: auto;
-  transform: translateY(35px) rotate(-20deg);
+  transform: translateY(95px) rotate(-20deg);
 }
 .icons .row {
   width: 100%;
@@ -938,8 +943,8 @@ function loop() {
     limiterTick++;
   }
 }
-
 window.onload = function () {
+  var revelead = false;
   var pages = document.getElementsByClassName("page");
   var merrywrap = document.getElementById("merrywrap");
   var letter = document.getElementById("letter");
@@ -965,19 +970,22 @@ window.onload = function () {
       letter.style ="animation: 4s slideLetter; animation-fill-mode: forwards";
     }
     if (step === 2) {
-      document.getElementsByClassName('back')[0] .style = "visibility: hidden";
-      document.getElementsByClassName('front')[0].style = "visibility: hidden";
+      document.getElementsByClassName('back')[0] .style = "display: none";
+      document.getElementsByClassName('front')[0].style = "display: none";
       letter.style = 'animation:2s expandLetter; animation-fill-mode: forwards';
     }
     if (step > 2) {
       merrywrap.className = 'merrywrap step-' + (step - 3);
     }
     if (step === 6) {
-      reveal();
+      if (revelead != true) {
+        revelead = true;
+        reveal();
+      }
       letter.className = 'letter';
     }
     if (step === 7) {
-      letter.style = "visibility: hidden";
+      letter.style = "display: none";
       return;
     }
     setTimeout(openLetter, stepMinutes[step]);
@@ -987,6 +995,14 @@ window.onload = function () {
   function menuActionClear() {
     for (var i=0; i < pages.length; i++) {
       pages[i].style = "display:none";
+    }
+    if (revelead != true) {
+      revelead = true;
+      document.getElementsByClassName('back')[0] .style = "display: none";
+      document.getElementsByClassName('front')[0].style = "display: none";
+      letter.style = "display: none";
+      merrywrap.className = 'merrywrap step-4';
+      reveal();
     }
   }
 
