@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.menu_wrapper {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+    </style>
+  </head>
+  <body>
+
+    <div class="navbar">
+      <a href="#home" id="button_home">Home</a>
+      <a href="#news" id="button_news">News</a>
+      <a href="#contact" id="button_contact">Contact</a>
+    </div>
+
+    <div class="menu_wrapper">
+      <div class="page" id="page_home" style="display:none">
+        <h1>Fixed Top Menu 1</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+
+      </div>
+
+      <div class="page" id="page_news" style="display:none">
+        <h1>Fixed Top Menu 2</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+      </div>
+
+      <div class="page" id="page_contact" style="display:none">
+        <h1>Fixed Top Menu 3</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+        <p>Some text some text some text some text..</p>
+      </div>
+
+    </div>
+
+    <script>
+
+      window.onload = function () {
+        var pages = document.getElementsByClassName("page");
+
+        function init() {
+          document.getElementById("button_home").addEventListener("click", menuHomeAction, false);
+          document.getElementById("button_news").addEventListener("click", menuNewsAction, false);
+          document.getElementById("button_contact").addEventListener("click", menuContactAction, false);
+        }
+
+        function menuActionClear() {
+          for (var i=0; i < pages.length; i++) {
+            pages[i].style = "display:none";
+          }
+        }
+
+        function menuHomeAction() {
+          console.log("menuHomeAction");
+          menuActionClear();
+          document.getElementById("page_home").style = "display:block";
+        }
+
+        function menuNewsAction() {
+          console.log("menuNewsAction");
+          menuActionClear();
+          document.getElementById("page_news").style = "display:block";
+        }
+
+        function menuContactAction() {
+          console.log("menuContactAction");
+          menuActionClear();
+          document.getElementById("page_contact").style = "display:block";
+        }
+
+        console.log("init()");
+        init();
+      }
+
+    </script>
+
+  </body>
+</html>
+
