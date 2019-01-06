@@ -2,7 +2,7 @@
 <head>
   <meta charset='UTF-8'>
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
-  <meta name="viewport" content="width=640, initial-scale=1.0"/>
+  <!--<meta name="viewport" content="width=640, initial-scale=1.0"/>-->
   <link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/emoreno911/pen/veBjbw?fbclid=IwAR2rC6aKyAvKKtZsi47MUEwdZ0BAPhyZN7CVuQ-HUqUleq8d9gfroLeNR-E" />
 
 
@@ -178,50 +178,6 @@ body {
   100%{transform:rotateX(180deg);}
 }
 
-.moon {
-  position: absolute;
-  top: 10%;
-  right: 15%;
-  width: 10%;
-  height: 10%;
-  border-radius: 50%;
-  background: #ddd;
-  box-shadow: inset 1.66% -0.83% 0 0 #b9b9b9;
-}
-
-.moon .crater1 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #bbb;
-  box-shadow: inset -3px 1.5px 0 0 #aaa;
-  top: 20px;
-  right: 20px;
-}
-
-.moon .crater2 {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #bbb;
-  box-shadow: inset -1px 0.5px 0 0 #aaa;
-  top: 45px;
-  right: 50px;
-}
-
-.moon .crater3 {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #bbb;
-  box-shadow: inset -1.5px 0.75px 0 0 #aaa;
-  top: 60px;
-  right: 25px;
-}
-
 @media (min-width: 1000px) {
   .icons {
     left: 30px;
@@ -241,15 +197,6 @@ body {
     background-size: 2000px;
   }
 
-  div#video {
-    right: 290px;
-    bottom: 235px;
-  }
-
-  div#video iframe {
-    width: 295px;
-    height: 185px;
-  }
 
   .moon {
     right: 230px;
@@ -272,15 +219,12 @@ div#beach {
   background-repeat: no-repeat;
 }
 
-div#video {
-  position: absolute;
-  right: 243px;
-  bottom: 200px;
-}
+div#video { position: absolute; right: 14%; bottom: 13%; width: 15%; height: 10%;}
+div#video iframe { width: 100%; height: 100%; }
 
-div#video iframe {
-  width: 255px;
-  height: 155px;
+@media (min-width: 1000px) {
+div#video { right: 295px; bottom: 310px; }
+div#video iframe { width: 295px; height: 180px; }
 }
 
 #people {
@@ -508,49 +452,43 @@ div#sea {
     text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
   }
 }
+
 .moon {
   position: absolute;
-  top: 10%;
-  right: 200px;
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
   background: #ddd;
-  box-shadow: inset 20px -10px 0 0 #b9b9b9;
 }
-
 .moon .crater1 {
   position: absolute;
-  width: 30px;
-  height: 30px;
   border-radius: 50%;
   background: #bbb;
-  box-shadow: inset -3px 1.5px 0 0 #aaa;
-  top: 20px;
-  right: 20px;
 }
 
 .moon .crater2 {
   position: absolute;
-  width: 10px;
-  height: 10px;
   border-radius: 50%;
   background: #bbb;
-  box-shadow: inset -1px 0.5px 0 0 #aaa;
-  top: 45px;
-  right: 50px;
 }
 
 .moon .crater3 {
   position: absolute;
-  width: 15px;
-  height: 15px;
   border-radius: 50%;
   background: #bbb;
-  box-shadow: inset -1.5px 0.75px 0 0 #aaa;
-  top: 60px;
-  right: 25px;
 }
+
+@media (max-width: 1000px) {
+.moon          { width: 50px;  height: 50px;  top: 100px;  right: 30px;   box-shadow: inset 10px -5px 0 0 #b9b9b9;   }
+.moon .crater1 { width: 15px;  height: 15px;  top: 10px;   right: 10px;   box-shadow: inset -1.5px 0.75px 0 0 #aaa;  }
+.moon .crater2 { width: 5px;   height: 5px;   top: 22.5px; right: 25px;   box-shadow: inset -0.5px 0.25px 0 0 #aaa;  }
+.moon .crater3 { width: 7.5px; height: 7.5px; top: 30px;   right: 12.5px; box-shadow: inset -0.75px 0.375px 0 0 #aaa;}
+}
+@media (min-width: 1000px) {
+.moon          { width: 100px; height:100px; top: 100px;   right: 60px;   box-shadow: inset 20px -10px 0 0 #b9b9b9; }
+.moon .crater1 { width: 30px;  height: 30px; top: 20px;    right: 20px;   box-shadow: inset -0.3px 1.5px 0 0 #aaa;  }
+.moon .crater2 { width: 10px;  height: 10px; top: 45px;    right: 50px;   box-shadow: inset -1px   0.5px  0 0 #aaa; }
+.moon .crater3 { width: 15px;  height: 15px; top: 60px;    right: 25px;   box-shadow: inset -1.5px 0.75px 0 0 #aaa; }
+}
+
 
 @media (min-width: 1000px) {
   .icons {
@@ -571,19 +509,7 @@ div#sea {
     background-size: 2000px;
   }
 
-  div#video {
-    right: 290px;
-    bottom: 235px;
-  }
 
-  div#video iframe {
-    width: 295px;
-    height: 185px;
-  }
-
-  .moon {
-    right: 230px;
-  }
 }
 </style></head><body>
 
@@ -646,6 +572,7 @@ div#sea {
 
 <div id="merrywrap" class="merrywrap">
   <div class="icons">
+    <!--
     <div class="row">
       <span>J</span>
       <span>o</span>
@@ -683,6 +610,11 @@ div#sea {
     </div>
     <div class="row">
       <span>4</span>
+      <span>t</span>
+      <span>h</span>
+      <span> </span>
+      <span>o</span>
+      <span>f</span>
       <span> </span>
       <span>O</span>
       <span>c</span>
@@ -694,6 +626,7 @@ div#sea {
       <span>1</span>
       <span>9</span>
     </div>
+    -->
   </div>
 </div>
 
