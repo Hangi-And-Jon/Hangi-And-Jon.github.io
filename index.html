@@ -58,20 +58,46 @@ body {
   overflow: auto;
 }
 
-.letter,
-.envolope {
+.letter {
   position:absolute;
   margin:auto;
-  top:0px;
-  left:0;
-  right:0;
-  width:320px;
-  z-index:2;
   perspective: 1000;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+  text-align:center;
+  transform-origin: center;
+  z-index: 96;
 }
+
+.letter span {
+  margin:10px auto;
+  background: transparent;
+  border-radius:50px;
+  display:inline-block;
+}
+
+
 .letter.animate {
   animation:6s slideLetter infinite ease-in-out;
 }
+@media (max-width: 1000px) {
+@keyframes slideLetter {
+  40%,60%,100%{transform:translate3d(0,-80px,0)}
+}
+
+@keyframes expandLetter {
+  0%{transform:translate3d(0,-80px,0)}
+  100%{transform:scale(1.5,1.5)}
+}
+
+.letter                    { width:160px; height:80px; top: 250px; left:0px; right:0px; }
+.letter span               { width:125px; height:10px; font-size: 15px; }
+.letter span:first-of-type { margin-top:17.5px; }
+
+}
+
+@media (min-width: 1000px) {
 @keyframes slideLetter {
   40%,60%,100%{transform:translate3d(0,-160px,0)}
 }
@@ -80,28 +106,19 @@ body {
   0%{transform:translate3d(0,-160px,0)}
   100%{transform:scale(2,2)}
 }
-#letter {
-  height:160px;
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
-  text-align:center;
-  top: 250px;
-  transform-origin: center;
-  z-index: 96;
+.letter                    { width:320px; height:160px; top: 250px; left:0px; right:0px; }
+.letter span               { width:250px; height:20px; font-size: 30px; }
+.letter span:first-of-type { margin-top:35px; }
 }
 
-#letter span {
-  margin:10px auto;
-  width:250px;
-  height:20px;
-  background: transparent;
-  border-radius:50px;
-  display:inline-block;
-  font-size: 30px;
-}
-#letter span:first-of-type {
-  margin-top:35px;
+.envolope {
+  position:absolute;
+  margin:auto;
+  top:0px;
+  left:0;
+  right:0;
+  z-index:2;
+  perspective: 1000;
 }
 #envolope {
   position:absolute;
