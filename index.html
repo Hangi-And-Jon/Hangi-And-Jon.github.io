@@ -829,9 +829,11 @@ function reveal() {
   {
     w = 255;h = 155;
   }
-
   var ifrm = document.createElement("iframe")
-  ifrm.setAttribute("src", "https://www.youtube.com/embed/ZtUJNhKbbx4?controls=0&loop=1&autoplay=1");
+
+  ifrm.setAttribute("src", "https://www.youtube.com/embed/ZtUJNhKbbx4?controls=0&loop=1");
+  ifrm.setAttribute("frameborder", "0");
+  ifrm.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
