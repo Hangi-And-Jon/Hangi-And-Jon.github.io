@@ -376,20 +376,20 @@ div#sea   { height: 85px; }
   <div class="page" id="page_news" style="display:none">
     <h1>Info</h1>
 
-    <p>You are free to stay anywhere you wish on the island and arrive at Agapanto at 16:00 on Friday the 4th of October. However, 
-      we will be staying in Mallorca one week before the wedding celebration. 
-      You are welcome to come earlier and enjoy this time with us and we will try to arrange get togethers for days at the beach, 
+    <p>You are free to stay anywhere you wish on the island and arrive at Agapanto at 16:00 on Friday the 4th of October. However,
+      we will be staying in Mallorca one week before the wedding celebration.
+      You are welcome to come earlier and enjoy this time with us and we will try to arrange get togethers for days at the beach,
       countryside treks, lunch/brunch/dinners or other events for those interested.
-      
-      On the day of the celebration we will start with an anti pasti buffet followed by open grill dishes, cake and other delicious desserts. 
-      There will be plenty of drinks served and we expect you to dance all night long :D  
+    </p><p>
+      On the day of the celebration we will start with an anti pasti buffet followed by open grill dishes, cake and other delicious desserts.
+      There will be plenty of drinks served and we expect you to dance all night long :D
     </p>
   </div>
 
   <div class="page" id="page_contact" style="display:none">
     <h1>Contact</h1>
 
-    <p>Please reply to either Jon Eric or Hangi by 1st of June if you can join our great party and when you will be arriving. 
+    <p>Please reply to either Jon Eric or Hangi by 1st of June if you can join our great party and when you will be arriving.
     If you have any questions regarding Mallorca, the celebration or anything else don't hesitate to contact either of us.
     </p>
   </div>
@@ -434,6 +434,7 @@ div#sea   { height: 85px; }
       <span>n</span>
       <span>g</span>
       <span>i</span>
+      <span>'</span>
       <span>s</span>
     </div>
     <div class="row">
@@ -784,6 +785,7 @@ window.onload = function () {
     }
     if (step === 7) {
       letter.style = "display: none";
+      document.getElementById("page_home").style = "display:block";
       return;
     }
     setTimeout(openLetter, stepMinutes[step]);
