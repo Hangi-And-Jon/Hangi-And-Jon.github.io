@@ -30,7 +30,8 @@ body {
   z-index: 300;
   overflow:hidden;
 }
-
+.screen_text { position: absolute; font-size: 14px; color: yellow; bottom: 0px; right: 0px; }
+.screen_wrap { position: relative; width: 100%; height: 100%; }
 .screen_res_overlay .screen176x220   { position: absolute; width: 176px;  height: 220px;  border: 1px dotted yellow; }
 .screen_res_overlay .screen240x320   { position: absolute; width: 240px;  height: 320px;  border: 1px dotted yellow; }
 .screen_res_overlay .screen320x240   { position: absolute; width: 320px;  height: 240px;  border: 1px dotted yellow; }
@@ -290,6 +291,25 @@ div#sea {
 .moon .crater3 { position: absolute; border-radius: 50%; background: #bbb; }
 </style>
 
+<link rel="stylesheet" type="text/css" href="screen176x220">
+<link rel="stylesheet" type="text/css" href="screen240x320">
+<link rel="stylesheet" type="text/css" href="screen320x240">
+<link rel="stylesheet" type="text/css" href="screen320x480">
+<link rel="stylesheet" type="text/css" href="screen320x533">
+<link rel="stylesheet" type="text/css" href="screen320x568">
+<link rel="stylesheet" type="text/css" href="screen360x640">
+<link rel="stylesheet" type="text/css" href="screen375x667">
+<link rel="stylesheet" type="text/css" href="screen414x736">
+<link rel="stylesheet" type="text/css" href="screen640x480">
+<link rel="stylesheet" type="text/css" href="screen800x480">
+<link rel="stylesheet" type="text/css" href="screen960x600">
+<link rel="stylesheet" type="text/css" href="screen1024x600">
+<link rel="stylesheet" type="text/css" href="screen1024x768">
+<link rel="stylesheet" type="text/css" href="screen1280x720">
+<link rel="stylesheet" type="text/css" href="screen1280x800">
+<link rel="stylesheet" type="text/css" href="screen1366x768">
+<link rel="stylesheet" type="text/css" href="screen1386x1024">
+<link rel="stylesheet" type="text/css" href="screen1440x900.css">
 <link rel="stylesheet" type="text/css" href="screen1440x1024.css">
 <link rel="stylesheet" type="text/css" href="screen1600x900.css">
 <link rel="stylesheet" type="text/css" href="screen1680x1050.css">
@@ -300,30 +320,30 @@ div#sea {
 <body>
 
 <div class="screen_res_overlay">
-  <div class="screen176x220"></div>
-  <div class="screen240x320"></div>
-  <div class="screen320x240"></div>
-  <div class="screen320x480"></div>
-  <div class="screen320x533"></div>
-  <div class="screen320x568"></div>
-  <div class="screen360x640"></div>
-  <div class="screen375x667"></div>
-  <div class="screen414x736"></div>
-  <div class="screen640x480"></div>
-  <div class="screen800x480"></div>
-  <div class="screen960x600"></div>
-  <div class="screen1024x600"></div>
-  <div class="screen1024x768"></div>
-  <div class="screen1280x720"></div>
-  <div class="screen1280x800"></div>
-  <div class="screen1366x768"></div>
-  <div class="screen1386x1024"></div>
-  <div class="screen1440x900"></div>
-  <div class="screen1440x1024"></div>
-  <div class="screen1600x900"></div>
-  <div class="screen1680x1050"></div>
-  <div class="screen1920x1080"></div>
-  <div class="screen1920x1200"></div>
+  <div class="screen176x220"  ><div class="screen_wrap"><div class="screen_text">176x220  </div></div></div>
+  <div class="screen240x320"  ><div class="screen_wrap"><div class="screen_text">240x320  </div></div></div>
+  <div class="screen320x240"  ><div class="screen_wrap"><div class="screen_text">320x240  </div></div></div>
+  <div class="screen320x480"  ><div class="screen_wrap"><div class="screen_text">320x480  </div></div></div>
+  <div class="screen320x533"  ><div class="screen_wrap"><div class="screen_text">320x533  </div></div></div>
+  <div class="screen320x568"  ><div class="screen_wrap"><div class="screen_text">320x568  </div></div></div>
+  <div class="screen360x640"  ><div class="screen_wrap"><div class="screen_text">360x640  </div></div></div>
+  <div class="screen375x667"  ><div class="screen_wrap"><div class="screen_text">375x667  </div></div></div>
+  <div class="screen414x736"  ><div class="screen_wrap"><div class="screen_text">414x736  </div></div></div>
+  <div class="screen640x480"  ><div class="screen_wrap"><div class="screen_text">640x480  </div></div></div>
+  <div class="screen800x480"  ><div class="screen_wrap"><div class="screen_text">800x480  </div></div></div>
+  <div class="screen960x600"  ><div class="screen_wrap"><div class="screen_text">960x600  </div></div></div>
+  <div class="screen1024x600" ><div class="screen_wrap"><div class="screen_text">1024x600 </div></div></div>
+  <div class="screen1024x768" ><div class="screen_wrap"><div class="screen_text">1024x768 </div></div></div>
+  <div class="screen1280x720" ><div class="screen_wrap"><div class="screen_text">1280x720 </div></div></div>
+  <div class="screen1280x800" ><div class="screen_wrap"><div class="screen_text">1280x800 </div></div></div>
+  <div class="screen1366x768" ><div class="screen_wrap"><div class="screen_text">1366x768 </div></div></div>
+  <div class="screen1386x1024"><div class="screen_wrap"><div class="screen_text">1386x1024</div></div></div>
+  <div class="screen1440x900" ><div class="screen_wrap"><div class="screen_text">1440x900 </div></div></div>
+  <div class="screen1440x1024"><div class="screen_wrap"><div class="screen_text">1440x1024</div></div></div>
+  <div class="screen1600x900" ><div class="screen_wrap"><div class="screen_text">1600x900 </div></div></div>
+  <div class="screen1680x1050"><div class="screen_wrap"><div class="screen_text">1680x1050</div></div></div>
+  <div class="screen1920x1080"><div class="screen_wrap"><div class="screen_text">1920x1080</div></div></div>
+  <div class="screen1920x1200"><div class="screen_wrap"><div class="screen_text">1920x1200</div></div></div>
 </div>
 
 <div class="navbar">
