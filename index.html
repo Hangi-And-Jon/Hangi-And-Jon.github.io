@@ -19,6 +19,43 @@ body {
   background-image: radial-gradient(circle at center bottom, #e9b64b, #c76075 15%, #0d0d4b 75%, #190e14 90%);
 }
 
+.screen_res_overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.0);
+  pointer-events: none;
+  top:0px;
+  left:0px;
+  width:3800px;
+  height:3200px;
+  z-index: 300;
+  overflow:hidden;
+}
+
+.screen_res_overlay .screen176x220   { position: absolute; width: 176px;  height: 220px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen240x320   { position: absolute; width: 240px;  height: 320px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen320x240   { position: absolute; width: 320px;  height: 240px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen320x480   { position: absolute; width: 320px;  height: 480px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen320x533   { position: absolute; width: 320px;  height: 533px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen320x568   { position: absolute; width: 320px;  height: 568px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen360x640   { position: absolute; width: 360px;  height: 640px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen375x667   { position: absolute; width: 375px;  height: 667px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen414x736   { position: absolute; width: 414px;  height: 736px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen640x480   { position: absolute; width: 640px;  height: 480px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen800x480   { position: absolute; width: 800px;  height: 480px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen960x600   { position: absolute; width: 960px;  height: 600px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen1024x600  { position: absolute; width: 1024px; height: 600px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen1024x768  { position: absolute; width: 1024px; height: 768px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen1280x720  { position: absolute; width: 1280px; height: 720px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen1280x800  { position: absolute; width: 1280px; height: 800px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen1366x768  { position: absolute; width: 1366px; height: 768px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen1386x1024 { position: absolute; width: 1386px; height: 1024px; border: 1px dotted yellow; }
+.screen_res_overlay .screen1440x900  { position: absolute; width: 1440px; height: 900px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen1440x1024 { position: absolute; width: 1440px; height: 1024px; border: 1px dotted yellow; }
+.screen_res_overlay .screen1600x900  { position: absolute; width: 1600px; height: 900px;  border: 1px dotted yellow; }
+.screen_res_overlay .screen1680x1050 { position: absolute; width: 1680px; height: 1050px; border: 1px dotted yellow; }
+.screen_res_overlay .screen1920x1080 { position: absolute; width: 1920px; height: 1080px; border: 1px dotted yellow; }
+.screen_res_overlay .screen1920x1200 { position: absolute; width: 1920px; height: 1200px; border: 1px dotted yellow; }
+
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -51,26 +88,9 @@ a { color: yellow; }
   color: #f2f2f2;
   overflow: auto;
   font-family: 'Georgia', serif;
-  padding: 16px;      font-size: 24px; top:380px; left:0px; right:400px; width:480px;
 }
 
 .navbar a     { padding: 14px 28px; font-size: 28px; }
-.menu_wrapper { padding: 16px;      font-size: 24px; top:380px; width:480px; }
-@media (max-height: 800px) {
-.menu_wrapper { height: 500px; left:200px; right:0px; top:190px;}
-}
-
-@media (min-height: 800px) and (max-height: 1000px) {
-.menu_wrapper { height: 300px; left:0px; right:400px; }
-}
-
-@media (min-height: 1000px) and (max-height: 1400px) {
-.menu_wrapper { height: 500px; left:0px; right:400px;}
-}
-
-@media (min-height: 1400px) {
-.menu_wrapper { height: 800px; left:0px; right:400px;}
-}
 
 .letter {
   position:absolute;
@@ -94,33 +114,6 @@ a { color: yellow; }
 
 .letter.animate {
   animation:6s slideLetter infinite ease-in-out;
-}
-@media (max-width: 1400px) {
-@keyframes slideLetter {
-  40%,60%,100%{transform:translate3d(0,-160px,0)}
-}
-
-@keyframes expandLetter {
-  0%{transform:translate3d(0,-160px,0)}
-  100%{transform:scale(2,2)}
-}
-.letter                    { width:320px; height:160px; top: 250px; left:0px; right:0px; }
-.letter span               { width:250px; height:20px; font-size: 30px; }
-.letter span:first-of-type { margin-top:35px; }
-}
-
-@media (min-width: 1400px) {
-@keyframes slideLetter {
-  40%,60%,100%{transform:translate3d(0,-320px,0)}
-}
-
-@keyframes expandLetter {
-  0%{transform:translate3d(0,-320px,0)}
-  100%{transform:scale(2,2)}
-}
-.letter                    { width:640px; height:320px; top: 500px; left:0px; right:0px; }
-.letter span               { width:500px; height:40px; font-size: 60px; }
-.letter span:first-of-type { margin-top:35px; }
 }
 
 .envolope {
@@ -176,24 +169,6 @@ a { color: yellow; }
   position: relative;
   content: "Click Me!";
 }
-@media (max-width: 1400px) {
-#envolope { width:340px; height:190px; top:250px; left:0; right:0; }
-.left     { top:-10px; left:-620px;               border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom: 350px solid red;       }
-.right    { top:-10px;              right:-620px; border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom:350px solid #D60B0B;    }
-.top_back {            left:-999px; right:-999px; border-left: 170px solid transparent; border-right: 170px solid transparent; border-top:170px solid rgb(168, 6, 6);}
-.top      {            left:-999px; right:-999px; border-left: 170px solid transparent; border-right: 170px solid transparent; border-top:170px solid rgb(168, 6, 6);}
-.top_flip {            left:-999px; right:-999px; border-left: 170px solid transparent; border-right: 170px solid transparent; border-top:170px solid rgb(168, 6, 6);}
-.top.text:after { top: -150px; left: -30px; font-size: 40px; }
-}
-@media (min-width: 1400px) {
-#envolope { width:680px; height:380px; top:500px; left:0; right:0; }
-.left     { top:-10px; left:-620px;               border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom: 350px solid red;       }
-.right    { top:-10px;              right:-620px; border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom:350px solid #D60B0B;    }
-.top_back {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top      {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top_flip {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top.text:after { top: -300px; left: -60px; font-size: 80px; }
-}
 
 @keyframes flipTop {
   100%{transform:rotateX(180deg);}
@@ -226,24 +201,6 @@ div#sea {
   bottom: 0px; left: 0px;
 }
 
-@media (max-width: 1400px) {
-div#video        { right: 145px; bottom: 117.5px; }
-div#video iframe { width: 147px; height: 90px; }
-div#beach { background-size: 1000px; }
-#people   { left: 40px; bottom: 35px; width:  80px;}
-#car      { bottom: 23px; left:  90px; width: 115px; }
-div#sea   { height: 42.5px; }
-}
-
-@media (min-width: 1400px) {
-div#video        { right: 290px; bottom: 235px; }
-div#video iframe { width: 295px; height: 180px; }
-div#beach { background-size: 2000px; }
-#people   { left: 80px; bottom: 70px; width: 160px; }
-#car      { bottom: 46px; left: 180px; width: 230px; }
-div#sea   { height: 85px; }
-}
-
 .merrywrap {
   position: absolute;
   background-color: #000000;
@@ -272,13 +229,6 @@ div#sea   { height: 85px; }
   transition: transform 0.5s ease-in, opacity 0.7s;
 }
 
-/*@media (max-width: 1400px) {
-.icons .row span { left: 10px; font-size: 12.5px; text-shadow: 1px 1px 0 rgba(96, 125, 139, 0.4); }
-}
-
-@media (min-width: 1400px) {*/
-.icons .row span { left: 30px; font-size: 50px; text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4); }
-/*}*/
 .step-1 .icons .row span {  opacity: 1; }
 
 @keyframes wobble {
@@ -338,21 +288,39 @@ div#sea   { height: 85px; }
 .moon .crater1 { position: absolute; border-radius: 50%; background: #bbb; }
 .moon .crater2 { position: absolute; border-radius: 50%; background: #bbb; }
 .moon .crater3 { position: absolute; border-radius: 50%; background: #bbb; }
+</style>
 
-@media (max-width: 1400px) {
-.moon          { width: 50px;  height: 50px;  top: 100px;  right: 30px;   box-shadow: inset 10px -5px 0 0 #b9b9b9;   }
-.moon .crater1 { width: 15px;  height: 15px;  top: 10px;   right: 10px;   box-shadow: inset -1.5px 0.75px 0 0 #aaa;  }
-.moon .crater2 { width: 5px;   height: 5px;   top: 22.5px; right: 25px;   box-shadow: inset -0.5px 0.25px 0 0 #aaa;  }
-.moon .crater3 { width: 7.5px; height: 7.5px; top: 30px;   right: 12.5px; box-shadow: inset -0.75px 0.375px 0 0 #aaa;}
-}
-@media (min-width: 1400px) {
-.moon          { width: 100px; height:100px; top: 100px;   right: 60px;   box-shadow: inset 20px -10px 0 0 #b9b9b9; }
-.moon .crater1 { width: 30px;  height: 30px; top: 20px;    right: 20px;   box-shadow: inset -0.3px 1.5px 0 0 #aaa;  }
-.moon .crater2 { width: 10px;  height: 10px; top: 45px;    right: 50px;   box-shadow: inset -1px   0.5px  0 0 #aaa; }
-.moon .crater3 { width: 15px;  height: 15px; top: 60px;    right: 25px;   box-shadow: inset -1.5px 0.75px 0 0 #aaa; }
-}
-</style></head>
+<link rel="stylesheet" type="text/css" href="screen1920x1200.css">
+
+</head>
 <body>
+
+<div class="screen_res_overlay">
+  <div class="screen176x220"></div>
+  <div class="screen240x320"></div>
+  <div class="screen320x240"></div>
+  <div class="screen320x480"></div>
+  <div class="screen320x533"></div>
+  <div class="screen320x568"></div>
+  <div class="screen360x640"></div>
+  <div class="screen375x667"></div>
+  <div class="screen414x736"></div>
+  <div class="screen640x480"></div>
+  <div class="screen800x480"></div>
+  <div class="screen960x600"></div>
+  <div class="screen1024x600"></div>
+  <div class="screen1024x768"></div>
+  <div class="screen1280x720"></div>
+  <div class="screen1280x800"></div>
+  <div class="screen1366x768"></div>
+  <div class="screen1386x1024"></div>
+  <div class="screen1440x900"></div>
+  <div class="screen1440x1024"></div>
+  <div class="screen1600x900"></div>
+  <div class="screen1680x1050"></div>
+  <div class="screen1920x1080"></div>
+  <div class="screen1920x1200"></div>
+</div>
 
 <div class="navbar">
   <a href="#home" id="button_home">Where and When</a>
