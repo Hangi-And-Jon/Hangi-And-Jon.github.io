@@ -29,9 +29,9 @@ div#video        { right: 244px; bottom: 198px; }
 div#video iframe { width: 248px; height: 152px; }
 div#beach { background-size: 1680px; }
 
-#people   { left: 80px; bottom: 70px; width: 160px; }
+#people   { left: 80px; bottom: 50px; width: 160px; }
 #car      { bottom: 46px; left: 180px; width: 230px; }
-div#sea   { height: 85px; }
+div#sea   { height: 75px; }
 
 .icons .row span { left: 30px; font-size: 50px; text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4); }
 
