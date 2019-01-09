@@ -2,40 +2,42 @@
 
 @media ((min-width:  375px) and (max-width:  414px) and                          (max-height:  736px)) or
        (                        (max-width:  375px) and (min-height:  667px) and (max-height:  736px)) {
-.menu_wrapper { padding: 16px; top: 320px; height: 800px; left:260px; right:550px; font-size: 20px; }
+.navbar a     { padding:  5px 10px; font-size: 20px; }
+.menu_wrapper { padding: 16px; top: 200px; height: 350px; left:20px; right:20px; font-size: 14px; }
 
 @keyframes slideLetter {
-  40%,60%,100%{transform:translate3d(0,-320px,0)}
+  40%,60%,100%{transform:translate3d(0,-200px,0)}
 }
 
 @keyframes expandLetter {
-  0%{transform:translate3d(0,-320px,0)}
-  100%{transform:scale(2,2)}
+  0%{transform:translate3d(0,-200px,0)}
+  100%{transform:translate3d(0,-100px,0); }
 }
-.letter                    { width:640px; height:320px; top: 400px; left:0px; right:0px; }
-.letter span               { width:500px; height:40px; font-size: 60px; }
-.letter span:first-of-type { margin-top:35px; }
+.letter                    { width:340px; height:190px; top: 350px; left:0px; right:0px; }
+.letter span               { width:340px; height:40px; font-size: 50px; }
+.letter span:first-of-type { margin-top:25px; }
 
-#envolope { width:680px; height:380px; top:400px; left:0; right:0; }
+#envolope { width:350px; height:200px; top:350px; left:0; right:0; }
 .left     { top:-10px; left:-620px;               border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom: 350px solid red;       }
 .right    { top:-10px;              right:-620px; border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom:350px solid #D60B0B;    }
-.top_back {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top      {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top_flip {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top.text:after { top: -300px; left: -60px; font-size: 80px; }
+.top_back {            left:-999px; right:-999px; border-left: 175px solid transparent; border-right: 175px solid transparent; border-top:180px solid rgb(168, 6, 6);}
+.top      {            left:-999px; right:-999px; border-left: 175px solid transparent; border-right: 175px solid transparent; border-top:180px solid rgb(168, 6, 6);}
+.top_flip {            left:-999px; right:-999px; border-left: 175px solid transparent; border-right: 175px solid transparent; border-top:180px solid rgb(168, 6, 6);}
+.top.text:after { top: -180px; left: -40px; font-size: 40px; }
 
-div#video        { right: 232px; bottom: 190px; }
-div#video iframe { width: 236px; height: 146px; }
+div#video        { right:  60px; bottom:  40px; }
+div#video iframe { width:  65px; height:  45px; }
 div#beach { background-size:  414px; }
 
-#people   { left: 80px; bottom: 70px; width: 160px; }
+#people   { left: 40px; bottom: 10px; width:  80px; }
 #car      { bottom: 46px; left: 180px; width: 230px; }
-div#sea   { height: 85px; }
+div#sea   { height: 25px; }
 
-.icons .row span { left: 30px; font-size: 50px; text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4); }
+.icons { top: 90px; left:  10px; }
+.icons .row span { font-size: 16px; text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4); }
 
-.moon          { width: 100px; height:100px; top: 100px;   right: 60px;   box-shadow: inset 20px -10px 0 0 #b9b9b9; }
-.moon .crater1 { width: 30px;  height: 30px; top: 20px;    right: 20px;   box-shadow: inset -0.3px 1.5px 0 0 #aaa;  }
-.moon .crater2 { width: 10px;  height: 10px; top: 45px;    right: 50px;   box-shadow: inset -1px   0.5px  0 0 #aaa; }
-.moon .crater3 { width: 15px;  height: 15px; top: 60px;    right: 25px;   box-shadow: inset -1.5px 0.75px 0 0 #aaa; }
+.moon          { width:  50px; height: 50px; top: 60px; right: 30px; box-shadow: inset 10px -5px 0 0 #b9b9b9; }
+.moon .crater1 { width: 15px;  height: 15px; top: 10px; right: 10px; box-shadow: inset -0.15px 0.75px 0 0 #aaa;  }
+.moon .crater2 { width:  5px;  height:  5px; top: 22px; right: 25px; box-shadow: inset -0.5px   0.25px  0 0 #aaa; }
+.moon .crater3 { width:  8px;  height:  8px; top: 30px; right: 12px; box-shadow: inset -0.75px 0.375px 0 0 #aaa; }
 }
