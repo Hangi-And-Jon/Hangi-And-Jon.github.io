@@ -1,0 +1,90 @@
+
+4:3    <select id="aspect_4x3"   onchange="update_iframe(screens_4x3  , aspect_4x3  , orientation)"></select>
+ 16:10 <select id="aspect_16x10" onchange="update_iframe(screens_16x10, aspect_16x10, orientation)"></select>
+ 16:9  <select id="aspect_16x9"  onchange="update_iframe(screens_16x9 , aspect_16x9 , orientation)"></select>
+ orientation 
+<select id="orientation" onchange="update_iframe_orientation()">
+  <option value="landscape">landscape</option>
+  <option value="portrait">portrait</option>
+</select>
+<br>
+<iframe src="index.html" id="screen"></iframe>
+<script>
+/*aspect 4:3   -  640x480 ,  800x600 , 960x720 , 1024x768 , 1280x960 , 1400x1050, 1440x1080, 1600x1200, 1856x1392, 1920x1440, 2048x1536 */
+/*aspect 16:10 - 1280x800 , 1440x900 , 1680x1050, 1920x1200, 2560x1600                                                                  */
+/*aspect 16:9  - 1024x576 , 1152x648 , 1280x720 , 1366x768 , 1600x900 , 1920x1080, 2560x1440, 3840x2160, 7680x4320                      */
+var screen        = document.getElementById("screen");
+var screens_4x3   = [ [ 640,480], [ 800,600], [ 960,720 ], [1024,768 ], [1280,960 ], [1400,1050], [1440,1080], [1600,1200], [1856,1392], [1920,1440], [2048,1536]];
+var screens_16x10 = [ [1280,800], [1440,900], [1680,1050], [1920,1200], [2560,1600]                                                                              ];
+var screens_16x9  = [ [1024,576], [1152,648], [1280,720 ], [1366,768 ], [1600,900 ], [1920,1080], [2560,1440], [3840,2160], [7680,4320]                          ];
+
+var aspect_4x3   = document.getElementById("aspect_4x3");
+var aspect_16x10 = document.getElementById("aspect_16x10");
+var aspect_16x9  = document.getElementById("aspect_16x9");
+var orientation  = document.getElementById("orientation");
+var current_w = 640;
+var current_h = 480;
+
+window.onload = function () {
+
+screen.style = "width: " + screens_4x3[0][0] + "px; height: " + screens_4x3[0][1];
+
+
+function init_screens(screens, aspect)
+{
+  for (var i=0; i < screens.length; i++)
+  {
+    var opt = document.createElement("option");
+    opt.value = i;
+    opt.text  = screens[i][0] + "x" + screens[i][1];
+    aspect.appendChild(opt);
+  }
+}
+
+init_screens(screens_4x3  , aspect_4x3  );
+init_screens(screens_16x10, aspect_16x10);
+init_screens(screens_16x9 , aspect_16x9 );
+
+
+aspect_4x3.addEventListener("onchange", function(){update_iframe(aspect_4x3  );}, false);
+aspect_16x10.addEventListener("onchange", function(){update_iframe(aspect_16x10);}, false);
+aspect_16x9.addEventListener("onchange", function(){update_iframe(aspect_16x9 );}, false);
+
+}
+
+function update_iframe(screens, aspect, orientation)
+{
+  var resolution = screens[aspect[aspect.selectedIndex].value];
+  if (orientation[orientation.selectedIndex].value === "landscape")
+  {
+    current_w = resolution[0];
+    current_h = resolution[1];
+  }
+  else
+  {
+    current_w = resolution[1];
+    current_h = resolution[0];
+  }
+
+  screen.style = "width: " + current_w + "px; height: " + current_h;
+}
+
+function update_iframe_orientation()
+{
+  var swap = false;
+  if (orientation[orientation.selectedIndex].value === "landscape")
+    swap = current_h > current_w;
+  else
+    swap = current_h <= current_w;
+
+  if (swap)
+  {
+    swap = current_h;
+    current_h = current_w;
+    current_w = swap;
+  }
+
+  screen.style = "width: " + current_w + "px; height: " + current_h;
+}
+
+</script>
