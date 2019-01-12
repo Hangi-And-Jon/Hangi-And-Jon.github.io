@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+@media (max-width:  768px) and (max-height:  768px) {
+.navbar a     { padding:  7px 14px; font-size: 14px; }
+.menu_wrapper { padding:  8px; top: 120px; height: 500px; left:10px; right:50px; font-size: 10px; }
+@media (min-height:  350px) {
+.navbar a     { font-size: 18px; }
+.menu_wrapper { padding:  8px; top: 120px; height: 500px; left:10px; right:50px; font-size: 14px; }
+}
+
+@keyframes slideLetter {
+  40%,60%,100%{transform:translate3d(0,-320px,0)}
+}
+
+@keyframes expandLetter {
+  0%{transform:translate3d(0,-320px,0); }
+  100%{transform:scale(1.1,1.1); transform:translate3d(0,-160px,0); }
+}
+.letter                    { width:320px; height:160px; bottom: 40px; left:0px; right:0px; }
+.letter span               { width:250px; height:20px; font-size: 30px; }
+.letter span:first-of-type { margin-top:27.5px; }
+
+#envolope { width:340px; height:190px; bottom:40px; left:0; right:0; }
+.left     { bottom:0px; left:-310px;               border-left: 300px solid transparent; border-right: 300px solid transparent; border-bottom: 175px solid red;       }
+.right    { bottom:0px;              right:-310px; border-left: 300px solid transparent; border-right: 300px solid transparent; border-bottom:175px solid #D60B0B;    }
+.top_back { bottom:0px; left:-999px; right:-999px; border-left: 170px solid transparent; border-right: 170px solid transparent; border-top:170px solid rgb(168, 6, 6);}
+.top      { bottom:0px; left:-999px; right:-999px; border-left: 170px solid transparent; border-right: 170px solid transparent; border-top:170px solid rgb(168, 6, 6);}
+.top_flip { bottom:0px; left:-999px; right:-999px; border-left: 170px solid transparent; border-right: 170px solid transparent; border-top:170px solid rgb(168, 6, 6);}
+.top.text:after { bottom: 150px; left: -30px; font-size: 30px; }
+
+div#video        { right: 120px; bottom: 70px; }
+div#video iframe { width: 100px; height:  65px; }
+div#beach { background-size:  768px; }
+
+#people   { left: 20px; bottom: 20px; width:  80px; }
+#cinema   { right: 120px; bottom: 20px; width: 100px; }
+#car      { bottom: 46px; left: 180px; width: 230px; }
+div#sea   { height: 60px; }
+
+.icons {  right:  100px; top:  35px; height: auto; }
+.icons .row span { left: 0px; font-size: 12px; text-shadow: 2px 2px 0 rgba(96, 125, 139, 0.4); }
+
+.moon          { width: 50px; height: 50px; top: 50px; right: 30px; box-shadow: inset 10px -5px 0 0 #b9b9b9; }
+.moon .crater1 { width: 15px; height: 15px; top: 10px; right: 10px; box-shadow: inset -0.15px 0.75px 0 0 #aaa;  }
+.moon .crater2 { width:  5px; height:  5px; top: 22px; right: 25px; box-shadow: inset -0.5px   0.25px  0 0 #aaa; }
+.moon .crater3 { width:  7px; height:  7px; top: 30px; right: 12px; box-shadow: inset -0.75px 0.375px 0 0 #aaa; }
+}
