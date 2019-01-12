@@ -28,12 +28,12 @@
 .top_flip { bottom:0px; left:-999px; right:-999px; border-left: 170px solid transparent; border-right: 170px solid transparent; border-top:170px solid rgb(168, 6, 6);}
 .top.text:after { bottom: 150px; left: -30px; font-size: 30px; }
 
-div#video        { right: 120px; bottom: 70px; }
-div#video iframe { width: 100px; height:  65px; }
+div#video        { right:  90px; bottom: 70px; }
+div#video iframe { width: 200px; height: 200px; }
 div#beach { background-size:  768px; }
 
 #people   { left: 20px; bottom: 20px; width:  80px; }
-#cinema   { right: 120px; bottom: 20px; width: 100px; }
+#cinema   { right:  90px; bottom: 20px; width: 200px; height: 130px }
 #car      { bottom: 46px; left: 180px; width: 230px; }
 div#sea   { height: 60px; }
 
