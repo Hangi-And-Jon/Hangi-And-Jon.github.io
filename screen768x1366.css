@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
 
-@media ((min-width: 1280px) and (max-width: 1366px) and                          (max-height:  768px)) or
-       ((min-width: 1024px) and (max-width: 1280px) and (min-height:  720px) and (max-height:  768px)) {
-.menu_wrapper { padding: 16px; top: 80px; height: 800px; left:500px; right:400px; font-size: 20px; }
+@media (max-width:  768px) and (min-height: 1201px) and (max-height: 1366px) {
+.navbar a     { padding: 14px 28px; font-size: 28px; }
+.menu_wrapper { padding: 16px; top: 400px; height: 600px; left:40px; right:40px; font-size: 20px; }
 
 @keyframes slideLetter {
   40%,60%,100%{transform:translate3d(0,-320px,0)}
@@ -12,26 +12,28 @@
   0%{transform:translate3d(0,-320px,0); }
   100%{transform:scale(1.1,1.1); transform:translate3d(0,-160px,0); }
 }
-.letter                    { width:640px; height:320px; top: 400px; left:0px; right:0px; }
+.letter                    { width:640px; height:320px; bottom: 40px; left:0px; right:0px; }
 .letter span               { width:500px; height:40px; font-size: 60px; }
 .letter span:first-of-type { margin-top:55px; }
 
-#envolope { width:680px; height:380px; top:400px; left:0; right:0; }
-.left     { top:-10px; left:-620px;               border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom: 350px solid red;       }
-.right    { top:-10px;              right:-620px; border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom:350px solid #D60B0B;    }
-.top_back {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top      {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top_flip {            left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
-.top.text:after { top: -300px; left: -60px; font-size: 80px; }
+#envolope { width:680px; height:380px; bottom:40px; left:0; right:0; }
+.left     { bottom:0px; left:-620px;               border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom: 350px solid red;       }
+.right    { bottom:0px;              right:-620px; border-left: 600px solid transparent; border-right: 600px solid transparent; border-bottom:350px solid #D60B0B;    }
+.top_back { bottom:0px; left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
+.top      { bottom:0px; left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
+.top_flip { bottom:0px; left:-999px; right:-999px; border-left: 340px solid transparent; border-right: 340px solid transparent; border-top:340px solid rgb(168, 6, 6);}
+.top.text:after { bottom: 300px; left: -60px; font-size: 80px; }
 
-div#video        { right: 200px; bottom: 160px; }
-div#video iframe { width: 200px; height: 130px; }
-div#beach { background-size: 1366px; }
+div#video        { right: 200px; bottom: 120px; }
+div#video iframe { width: 220px; height: 150px; }
+div#beach { background-size:  768px; }
 
 #people   { left: 80px; bottom: 45px; width: 160px; }
+#cinema   { right: 200px; bottom: 10px; width: 220px; }
 #car      { bottom: 46px; left: 180px; width: 230px; }
 div#sea   { height: 60px; }
 
+.icons {  right: 120px; top: 150px; height: auto; transform: rotate(20deg); }
 .icons .row span { left: 30px; font-size: 50px; text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4); }
 
 .moon          { width: 100px; height:100px; top: 100px;   right: 60px;   box-shadow: inset 20px -10px 0 0 #b9b9b9; }
