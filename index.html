@@ -32,21 +32,12 @@ body {
 }
 .screen_text { position: absolute; font-size: 14px; color: yellow; bottom: 10px; right: 10px; transform: rotate(20deg);}
 .screen_wrap { position: relative; width: 100%; height: 100%; }
-.screen_res_overlay .screen640x480   { position: absolute; width: 640px;  height: 480px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen800x480   { position: absolute; width: 800px;  height: 480px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen960x600   { position: absolute; width: 960px;  height: 600px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen1024x600  { position: absolute; width: 1024px; height: 600px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen1024x768  { position: absolute; width: 1024px; height: 768px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen1280x720  { position: absolute; width: 1280px; height: 720px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen1280x800  { position: absolute; width: 1280px; height: 800px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen1366x768  { position: absolute; width: 1366px; height: 768px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen1386x1024 { position: absolute; width: 1386px; height: 1024px; border: 1px dotted yellow; }
-.screen_res_overlay .screen1440x900  { position: absolute; width: 1440px; height: 900px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen1440x1024 { position: absolute; width: 1440px; height: 1024px; border: 1px dotted yellow; }
-.screen_res_overlay .screen1600x900  { position: absolute; width: 1600px; height: 900px;  border: 1px dotted yellow; }
-.screen_res_overlay .screen1680x1050 { position: absolute; width: 1680px; height: 1050px; border: 1px dotted yellow; }
-.screen_res_overlay .screen1920x1080 { position: absolute; width: 1920px; height: 1080px; border: 1px dotted yellow; }
+.screen_res_overlay .screen1366x768  { position: absolute; width: 1366px; height:  768px; border: 1px dotted yellow; }
+.screen_res_overlay .screen768x1366  { position: absolute; width:  768px; height: 1366px; border: 1px dotted yellow; }
+.screen_res_overlay .screen1600x1200 { position: absolute; width: 1600px; height: 1200px; border: 1px dotted yellow; }
+.screen_res_overlay .screen1200x1600 { position: absolute; width: 1200px; height: 1600px; border: 1px dotted yellow; }
 .screen_res_overlay .screen1920x1200 { position: absolute; width: 1920px; height: 1200px; border: 1px dotted yellow; }
+.screen_res_overlay .screen1200x1920 { position: absolute; width: 1200px; height: 1920px; border: 1px dotted yellow; }
 
 .navbar {
   overflow: hidden;
@@ -282,41 +273,23 @@ div#sea {
 .moon .crater3 { position: absolute; border-radius: 50%; background: #bbb; }
 </style>
 
-<link rel="stylesheet" type="text/css" href="screen640x480.css">
-<link rel="stylesheet" type="text/css" href="screen800x480.css">
-<link rel="stylesheet" type="text/css" href="screen960x600.css">
-<link rel="stylesheet" type="text/css" href="screen1024x600.css">
-<link rel="stylesheet" type="text/css" href="screen1024x768.css">
-<link rel="stylesheet" type="text/css" href="screen1280x720.css">
-<link rel="stylesheet" type="text/css" href="screen1280x800.css">
 <link rel="stylesheet" type="text/css" href="screen1366x768.css">
-<link rel="stylesheet" type="text/css" href="screen1386x1024.css">
-<link rel="stylesheet" type="text/css" href="screen1440x900.css">
-<link rel="stylesheet" type="text/css" href="screen1440x1024.css">
-<link rel="stylesheet" type="text/css" href="screen1600x900.css">
-<link rel="stylesheet" type="text/css" href="screen1680x1050.css">
-<link rel="stylesheet" type="text/css" href="screen1920x1080.css">
+<link rel="stylesheet" type="text/css" href="screen768x1366.css">
+<link rel="stylesheet" type="text/css" href="screen1600x1200.css">
+<link rel="stylesheet" type="text/css" href="screen1200x1600.css">
 <link rel="stylesheet" type="text/css" href="screen1920x1200.css">
+<link rel="stylesheet" type="text/css" href="screen1200x1920.css">
 
 </head>
 <body>
 
 <div class="screen_res_overlay">
-  <div class="screen640x480"  ><div class="screen_wrap"><div class="screen_text">640x480  </div></div></div>
-  <div class="screen800x480"  ><div class="screen_wrap"><div class="screen_text">800x480  </div></div></div>
-  <div class="screen960x600"  ><div class="screen_wrap"><div class="screen_text">960x600  </div></div></div>
-  <div class="screen1024x600" ><div class="screen_wrap"><div class="screen_text">1024x600 </div></div></div>
-  <div class="screen1024x768" ><div class="screen_wrap"><div class="screen_text">1024x768 </div></div></div>
-  <div class="screen1280x720" ><div class="screen_wrap"><div class="screen_text">1280x720 </div></div></div>
-  <div class="screen1280x800" ><div class="screen_wrap"><div class="screen_text">1280x800 </div></div></div>
-  <div class="screen1366x768" ><div class="screen_wrap"><div class="screen_text">1366x768 </div></div></div>
-  <div class="screen1386x1024"><div class="screen_wrap"><div class="screen_text">1386x1024</div></div></div>
-  <div class="screen1440x900" ><div class="screen_wrap"><div class="screen_text">1440x900 </div></div></div>
-  <div class="screen1440x1024"><div class="screen_wrap"><div class="screen_text">1440x1024</div></div></div>
-  <div class="screen1600x900" ><div class="screen_wrap"><div class="screen_text">1600x900 </div></div></div>
-  <div class="screen1680x1050"><div class="screen_wrap"><div class="screen_text">1680x1050</div></div></div>
-  <div class="screen1920x1080"><div class="screen_wrap"><div class="screen_text">1920x1080</div></div></div>
-  <div class="screen1920x1200"><div class="screen_wrap"><div class="screen_text">1920x1200</div></div></div>
+  <div class="screen1366x768 "><div class="screen_wrap"><div class="screen_text">1366x768 </div></div></div>
+  <div class="screen768x1366 "><div class="screen_wrap"><div class="screen_text">768x1366 </div></div></div>
+  <div class="screen1600x1200"><div class="screen_wrap"><div class="screen_text">1600x1200</div></div></div>
+  <div class="screen1200x1600"><div class="screen_wrap"><div class="screen_text">1200x1600</div></div></div>
+  <div class="screen1600x1200"><div class="screen_wrap"><div class="screen_text">1920x1200</div></div></div>
+  <div class="screen1200x1920"><div class="screen_wrap"><div class="screen_text">1200x1920</div></div></div>
 </div>
 
 <div class="navbar">
