@@ -35,7 +35,7 @@ div#beach { background-size:  768px; }
 #people   { left: 20px; bottom: 20px; width:  80px; }
 #cinema   { right: 120px; bottom: 20px; width: 100px; }
 #car      { bottom: 46px; left: 180px; width: 230px; }
-div#sea   { height: 60px; }
+div#sea   { height: 35px; }
 
 .icons {  right:  100px; top:  35px; height: auto; }
 .icons .row span { left: 0px; font-size: 12px; text-shadow: 2px 2px 0 rgba(96, 125, 139, 0.4); }
